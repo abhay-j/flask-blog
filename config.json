@@ -1,0 +1,24 @@
+{
+  "params":
+  {
+    "local_server" : "True",
+    "local_uri": "mysql+pymysql://root:@localhost/your_database_name",
+    "prod_uri" : "mysql+pymysql://root:@localhost/your_database_name",
+    "fb_url" : "https://facebook.com/",
+    "gh_url": "https://github.com/",
+    "gmail-user":"example@gmail.com",
+    "gmail-password":"examplepassword",
+    "about_text":"about you",
+    "blog_name" : "your blog name",
+    "admin_user" : "username",
+    "admin_pass" : "password",
+    "number_of_posts" : 3
+
+
+
+}
+
+
+
+
+}
