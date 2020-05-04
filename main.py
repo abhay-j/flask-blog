@@ -71,17 +71,7 @@ def contact():
         msg=Message('new message from '+ name,sender=email,recipients = [params['gmail-user']],body=msg+'\n'+phone_num)
         mail.send(msg)
     return render_template("contact.html",params=params)
-    #if(request.method=='POST'):
-    #     '''Add entry to the database'''
-    #     name = request.form.get('name')
-    #     email = request.form.get('email')
-    #     phone = request.form.get('phone')
-    #     message = request.form.get('msg')
-    #     entry = Contacts(name=name, phone = phone, msg = message, date= datetime.now(),email = email )
-    #     db.session.add(entry)
-    #     db.session.commit()
-    # return render_template('contact.html')
-
+    
 
 @app.route("/about")
 def about():
@@ -92,11 +82,7 @@ def about():
 @app.route("/post/<post_slug>" , methods=['GET' , 'POST'])
 def post_route(post_slug):
     post = Posts.query.filter_by(slug=post_slug).first()
-    # if request.method == 'POST':
-    #     likes = request.form.get('likebutton')
-    #     likebutton = Posts(likes = likes)
-    #     db.session.add(likebutton)
-    #     db.session.commit()
+    
 
 
 
@@ -161,7 +147,7 @@ def edit(sno):
         post = Posts.query.filter_by(sno = sno).first()
         return render_template('edit.html' , params=params , post = post , sno = sno)
 
-# response.headers.add('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0')
+
 
 @app.route("/logout")
 def logout():
